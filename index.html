@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script defer src="js/index.js"></script>
+    <script src="js/inputmask.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="styles/reset.min.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
+
+    <title>Все падежи</title>
+  </head>
+
+  <body class="flexcenter">
+    <main>
+      <p>Существительное в именительном падеже:</p>
+      <input
+        type="text"
+        id="originalWord"
+        placeholder="Например: облако"
+        autofocus
+        data-inputmask-regex="[А-Яа-яЁё]{2,}"
+      />
+
+      <p>Падеж, в котором хотите увидеть слово:</p>
+      <select name="cases" id="cases">
+        <option value="2">Родительный</option>
+        <option value="3">Дательный</option>
+        <option value="4">Винительный</option>
+        <option value="5">Творительный</option>
+        <option value="6">Предложный</option>
+      </select>
+
+      <p>Укажите род введённого слова:</p>
+      <select name="gender" id="genderValue">
+        <option value="m">Мужской</option>
+        <option value="f">Женский</option>
+        <option value="n">Средний</option>
+      </select>
+
+      <p>Укажите число введённого слова:</p>
+      <select name="numerity" id="numerityValue">
+        <option value="single">Единственное</option>
+        <option value="multi">Множественное</option>
+      </select>
+
+      <button type="button" id="updateBtn">Обновить результат</button>
+      <p class="resultArea"></p>
+    </main>
+  </body>
+</html>

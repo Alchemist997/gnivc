@@ -1,0 +1,96 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+  background-color: $main;
+  color: $blackMain;
+  font-size: 18px;
+  transition: 0.2s;
+}
+
+button,
+select,
+input,
+.resultArea {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 5px;
+  appearance: none;
+  font-size: 16px;
+  color: $blackMain;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background-color: $main;
+  transition: 0.2s;
+  background-color: $mainDark12;
+  text-align: center;
+}
+
+input,
+select {
+  &:focus,
+  &:hover {
+    background-color: $mainDark20;
+  }
+}
+
+select,
+button {
+  cursor: pointer;
+}
+
+input {
+  padding-left: 10px;
+}
+
+button {
+  // background-color: #c18755;
+  background-color: $mainDark12;
+  justify-self: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  transition: 0.1s;
+
+  &:active {
+    transform: translateY(2px);
+  }
+
+  &:hover {
+    background-color: $mainDark20;
+  }
+}
+
+.resultArea {
+  font-size: 18px;
+  min-height: 29px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.flexcenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body.flexcenter {
+  min-height: 100vh;
+
+  main {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: repeat(5, auto);
+    justify-content: center;
+    align-items: center;
+    grid-gap: 20px;
+    min-width: 500px;
+  }
+}
