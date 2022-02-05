@@ -26,7 +26,7 @@
         id="originalWord"
         placeholder="Например: облако"
         autofocus
-        data-inputmask-regex="[А-Яа-яЁё]{2,}"
+        data-inputmask-regex="[А-Яа-я]{1,}"
       />
 
       <p>Падеж, в котором хотите увидеть слово:</p>
@@ -39,17 +39,20 @@
       </select>
 
       <p>Укажите род введённого слова:</p>
-      <select name="gender" id="genderValue">
+      <select name="genderSwitch" id="genderSwitch">
         <option value="m">Мужской</option>
         <option value="f">Женский</option>
         <option value="n">Средний</option>
       </select>
 
-      <p>Укажите число введённого слова:</p>
+      <!-- <p>Укажите число введённого слова:</p>
       <select name="numerity" id="numerityValue">
         <option value="single">Единственное</option>
         <option value="multi">Множественное</option>
-      </select>
+      </select> -->
+
+      <p>Вопросы к выбранному падежу:</p>
+      <p class="questionsForCase">кого? чего?</p>
 
       <button type="button" id="updateBtn">Обновить результат</button>
       <p class="resultArea"></p>
